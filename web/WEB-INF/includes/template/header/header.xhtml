@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <!-- Masthead -->
+    <header class="masthead">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center justify-content-center text-center">
+                <div class="col-lg-10 align-self-end">
+                    <h1 class="text-uppercase text-white font-weight-bold" alt="Repuestos para motos" > Repuestos y Accesorios Para Motos </h1>
+                    <hr class="divider my-4" style="border-color: #CF7D34"/>
+                </div>
+                <div class="col-lg-8 align-self-baseline">
+                    <p class="text-light mb-5" style="font-size: xx-large;">Contamos con repuestos para las marcas<b style="color: #fff">AKT, SUZUKY, HONDA, YAMAHA y más</b>...</p>
+                    <a class="text-white btn btn-xl js-scroll-trigger " style="background:#cf7d34 "  href="https://api.whatsapp.com/send?phone=+57 3186877469&amp;text=Hola vi un anuncio en tu pagina web quiero saber costos de sus servicios">Escribenos</a>
+                </div>
+            </div>
+        </div>
+
+        <ui:include src="/WEB-INF/includes/modals/modal_inicio.xhtml">
+            <ui:define name="contenidoModalV">
+                <div class="form-group">
+                            <label for="exampleInputEmail1">*Correo Electronico</label>
+                            <input type="email" class="form-control" id="correo" placeholder="ejemplo@gmal.com"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1"> *Contraseña:</label>
+                            <input type="password" class="form-control" id="contraseña" placeholder="Escribe tu contraseña" max="10" />
+                            <small  class="form-text text-muted">No mas de 10 Caracteres alfanumericos</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1"> *Telefono:</label>
+                            <input type="number" pattern="[0-9]*" class="form-control" id="telefono" plasholder="Escribe tu numero celular" max="10"  />
+                        </div>
+                        <div class="form-group">
+                            <small  class="form-text  text-danger text-muted">  Todos los campos con * son obligatorios  </small>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+            </ui:define>
+        </ui:include>
+        
+    </header>
+</ui:composition>
+

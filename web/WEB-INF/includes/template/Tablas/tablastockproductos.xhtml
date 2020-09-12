@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <div class="container d-flex flex-column ">
+        <div class="row">
+            <div class="col">
+                
+                <div class="card">
+                    <div class="card-body">
+                         <h:dataTable  class="table table-bordered table-hover" value="">
+
+                    <h:column>
+                        <f:facet name="header"> id Repuesto </f:facet>
+                        <h:outputText value="1"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header"> id  tipo Repuesto </f:facet>
+                        <h:outputText value="1"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header"> Nombre Repuesto </f:facet>
+                        <h:outputText value="xxx"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header"> Cantidad Disponible  </f:facet>
+                        <h:outputText value="1"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header"> Marca </f:facet>
+                        <h:outputText value="akt"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header"> Valor Venta </f:facet>
+                        <h:outputText value="122"/>
+                    </h:column>
+                </h:dataTable>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h:dataTable class="table table-bordered table-hover" >
+                            <h:column>
+                                <f:facet name="header"> id Repuesto </f:facet>
+                                <h:outputText value="1"/>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header"> Nombre Tipo Repuesto </f:facet>
+                                <h:outputText value="1"/>
+                            </h:column>
+                        </h:dataTable>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</ui:composition>
