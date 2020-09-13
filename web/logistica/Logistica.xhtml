@@ -91,22 +91,8 @@
                                 <div class="card-body">
                                     <div class="table-responsive">
                                         
-                                        <h:dataTable class="table table-bordered table-hover" value="#{usuarioController.usuario}" var="u">
-                                            <h:column>
-                                                <f:facet  name="header">ID</f:facet>
-                                                <h:outputText value="#{u.id}"/>
-                                            </h:column>
-                                            <h:column>
-                                                <f:facet name="header">Primer nombre</f:facet>
-                                                <h:outputText value="#{u.nombre1}"/>
-                                            </h:column>
-                                            
-                                            <h:column>
-                                                <f:facet name="header">Segundo Nombre</f:facet>
-                                                <h:outputText value="#{u.nombre2}"/>
-                                                </h:column> 
-                                            
-                                        </h:dataTable>
+                                        <ui:include src="../WEB-INF/includes/template/Tablas/tablaPedidos.xhtml"></ui:include>
+                                       
                                     
                                     </div>
                                 </div>
