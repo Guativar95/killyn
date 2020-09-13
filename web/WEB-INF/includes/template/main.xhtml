@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title><ui:insert name="tittle"></ui:insert> || Killyn Motos</title>
+        <ui:include src="/WEB-INF/includes/template/head/head_template.xhtml"></ui:include>
+        <ui:insert name="styles_page"></ui:insert>
+    </h:head>
+    <h:body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark" style="background-color: rgba(92,73,57,0.7);">
+            <ui:include src="/WEB-INF/includes/template/navegacion/nav_template.xhtml"></ui:include>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion" id="sidenavAccordion" style="background-color: rgba(92,73,57,0.7);">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav user-panel mt-3 pb-3 mb-3 d-flex">
+                            <div class="sb-sidenav-menu-heading font-weight-bold text-center">
+                                <h3 style="color: #CF7D34"><b><ui:insert name="modulo"></ui:insert></b></h3> 
+                            </div>
+                            <div class="image">
+                                <ui:insert name="foto_usuario">
+                                    <img src="#{request.contextPath}/resources/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image"/>
+                                </ui:insert>
+                            </div>
+                            <div class="info">
+                                <a href="#" class="d-block font-weight-bold text-light"><b><ui:insert name="usuario"></ui:insert></b></a>
+                            </div>
+                        </div>
+                        <div class="sb-sidenav-menu-heading font-weight-bold text-center"><h3 style="color: #CF7D34"><b>Menú <ui:insert name="menu_main"></ui:insert></b></h3></div>
+                        <ui:insert name="opc_menu1">
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pedidos1" aria-expanded="false" aria-controls="pedidos1">
+                                <div class="sb-nav-link-icon font-weight-bold text-light"><i class="fas fa-check"></i> Pedidos</div>
+                                <div class="sb-sidenav-collapse-arrow" style="color: #CF7D34"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="pedidos1" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link text-light" href="#pedidos">Tabla de Pedidos</a>
+                                </nav>
+                            </div>
+                        </ui:insert>
+                        <ui:insert name="opc_menu2">
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#despachos1" aria-expanded="false" aria-controls="despachos1">
+                                <div class="sb-nav-link-icon font-weight-bold text-light"><i class="fas fa-truck"></i> Despachos</div>
+                                <div class="sb-sidenav-collapse-arrow" style="color: #CF7D34"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="despachos1" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link text-light" href="#despachos">Tabla de despachos</a>
+                                    <a class="nav-link text-light" href="#pedidosModal" data-toggle="modal">Crear Despacho</a>
+                                </nav>
+                            </div>
+                        </ui:insert>
+                        <ui:insert name="opc_menu3">
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#stock1" aria-expanded="false" aria-controls="stock1">
+                                <div class="sb-nav-link-icon font-weight-bold text-light"><i class="fas fa-cogs"></i> Stock Repuestos</div>
+                                <div class="sb-sidenav-collapse-arrow" style="color: #CF7D34"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="stock1" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link text-light" href="#stock">Tabla de Stock de Repuestos</a>
+                                    <a class="nav-link text-light" href="#pedidosModal" data-toggle="modal">Añadir Repuesto</a>
+                                </nav>
+                            </div>
+                        </ui:insert>
+                        <ui:insert name="opc_menu4">
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#solicitudes1" aria-expanded="false" aria-controls="solicitudes1">
+                                <div class="sb-nav-link-icon font-weight-bold text-light"><i class="fas fa-plus"></i> Solicitud Orden de Compra Repuesto</div>
+                                <div class="sb-sidenav-collapse-arrow" style="color: #CF7D34"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="solicitudes1" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link text-light" href="#solicitudesCR">Tabla de Solictudes de Compra</a>
+                                    <a class="nav-link text-light" href="#pedidosModal" data-toggle="modal">Generar Solicitud de Compra de Repuesto</a>
+                                </nav>
+                            </div>
+                        </ui:insert>
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid">
+                        <ui:insert name="breadcrumbs">
+                            <ol class="breadcrumb mb-4">
+                                <li class="breadcrumb-item active">
+                                    <a href="index.html">Inicio</a>
+                                </li>
+                            </ol>
+                        </ui:insert>
+                        <h1  class="mt-4 font-weight-bold text-center"><ui:insert name="tittle_page"></ui:insert></h1>
+                        <ui:insert name="content"></ui:insert>
+                    </div>
+                </main>
+                <ui:include src="/WEB-INF/includes/template/footer/footer_template.xhtml"></ui:include>
+            </div>
+        </div>
+        <ui:include src="/WEB-INF/includes/template/scripts/scripts_template.xhtml"></ui:include>
+        <ui:insert name="scripts_page"></ui:insert>
+        <ui:include src="/WEB-INF/includes/modals/modal_despachos.xhtml"></ui:include>
+        <ui:insert name="modal_page"></ui:insert>
+    </h:body>
+</html>
+
